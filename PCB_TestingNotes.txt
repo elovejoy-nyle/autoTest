@@ -1,4 +1,3 @@
-<pre>
 Notes:
 This is some notes on the process of Creating an automated board tester.
 Sure, Desinging the thing sounds fun, but Im a newb, and there are whole companies that do this type of thing.
@@ -55,7 +54,7 @@ Specific tests are not yet defined for Test and Measure.
 min TP distance so far: TP131 to TP112 == 2.1mm
 ( I havn't found one lower yet. )
 
-Dimensions :: 200x300  :: Have to chack that.
+Dimensions mm :: 280 x 160
 
 Desired Pogo Pin Piston design -> Flat
 
