@@ -62,10 +62,17 @@ Desired Pogo Pin Piston design -> Flat
 
 
 === Possible Vendors: =====
+------ USA -----
+https://circuitcheck.com/
+https://emctechinc.com/
+https://www.testhead.com/
+www.fixturfab.com
+https://ctscorp-usa.com/custom-fixtures-jig/
 
+------- International --------
 https://microhubtech.com/get-in-touch/
-
-
+https://www.testfixtures.com/pcb-test-fixtures/#request-quote
+https://wireflow.com/pcb-test-solution/fixtures/
 
 
 ####################
