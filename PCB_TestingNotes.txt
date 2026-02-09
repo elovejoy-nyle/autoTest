@@ -1,0 +1,95 @@
+<pre>
+Notes:
+This is some notes on the process of Creating an automated board tester.
+Sure, Desinging the thing sounds fun, but Im a newb, and there are whole companies that do this type of thing.
+Those Companies are going to have questions, like: 
+how many test points?
+how big is the board?
+Test Point Direction? Top, bottom, both...
+Minimum Pitch to Pitch distance: (how close are the Test Points to eachother?)
+what specific tests? (continutiy, ohms? RF? point to point connectivity?)
+Test Point Pad diameter.
+
+
+
+==== Design concepts ====
+Pogo Pins:
+  plunger + barrel + spring.
+  Described as: Body, insulator matierial, spring, piston, tail.
+  Piston disgns: Concave, pointed, round, crown, chisel, FLAT
+  Different puston types have various purposes.
+  Travel: longer piston travel can help with uneven boards / hand loaded test fixtures.
+  spring length directly relates to internal restistance, and speed at which pins can be placed. (bounce), and resistive (pin to pin ) variance.
+
+Some pogos are solderd into boards. ( better for small boards )
+Others are mechaicaly placed in Jigs, and wired back to a connector. 
+
+Conductors may be crimped, solderd, or screwed in. I guess that depends on what future serviceablity is going to be like.
+
+Floating / Compliant Mounts :: Pogo pins are mounted in a plate, the plate rides on springs or elastomer. Alignment pins may be used to 
+        keep the testing apparatus oriented properly relative to the PCB being tested. 
+    This method is intended to compensate for board tolerence variation, 
+        not to handle alignment.
+
+
+
+=== Design Factors=====
+Ampacity :: probably 2Amps or less. 
+RF :: I dont know if we want to do RF tests.
+We want repeatable board testing for the HPC.
+
+Docking Method:: levered, pneumatic, or manual.
+
+
+
+############ TESTS #######################
+The Test Points and their descriptings are on page 1 of the schematic. 
+OR See the Test Point Legend in this REPO:
+
+
+
+Specific tests are not yet defined for Test and Measure.
+
+
+=== Our Specs =====
+min TP distance so far: TP131 to TP112 == 2.1mm
+( I havn't found one lower yet. )
+
+Dimensions :: 200x300  :: Have to chack that.
+
+Desired Pogo Pin Piston design -> Flat
+
+
+
+=== Possible Vendors: =====
+
+https://microhubtech.com/get-in-touch/
+
+
+
+
+####################
+JLPCB does not have this 
+service
+
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
