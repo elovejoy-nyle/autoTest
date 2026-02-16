@@ -1,0 +1,1 @@
+These were AI generated using the BOM.csv, and Netlist.d356 IPC file. The ouput has not been verified.
