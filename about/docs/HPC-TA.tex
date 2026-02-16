@@ -1,32 +1,83 @@
 \documentclass[]{article}
-
+\usepackage{graphicx}
 %opening
 \title{HPC PCB Testing apparatus and methods}
 \author{Nyle Systems Control}
 
 \begin{document}
+	
+	\maketitle
+	
+	\begin{abstract}
+		The HPC PCB is a product used in Nyle heat pump units, manufactured by JLPCB. The boards require testing to ensure quality. The purpose of this document is to describe how this process may be performed.
+		The Testing Apparatus will provide all of the connections necessary to test the HPC, including power to the board. The HPC Testing Apparatus is and electro mechanical device intended only to perform quality controls against a cross section of HPC PCBs created. 
+	\end{abstract}
+	
+	\section*{Its Automated!}
+	The purpose of the HPC-TA  is to perform the 50 to 1000 tests that may guaranty the reasonable quality, of the HPC-TA with minimal human intervention. Never the less, it is a human operated device. Human operators must remain aware of possible fault conditions. A short circuit, for example could cause fire, or a hot smell. Any irregular behaviour from the HPC-TA should result in it being turned off. \\
+	
+	A human operator may also be expected to perform a visual inspection of the HPC PCB prior to testing. 
+	A PCB with obvious physical damage, oily residues, or with other obvious defects may be omitted from testing to avoid unexpected behaviour. 
+	
+	\section*{TP: Test Points}
+	The HPC PCB Contains 221 TP, 1-236, enumerated as TP1, TP2, ... TP236. The Test points allow for component testing, and live circuit testing. For the 
+	\subsection*{Types of Tests}
 
-\maketitle
-
-\begin{abstract}
-The HPC PCB is a product used in Nyle heat pump units, manufactured by JLPCB. The boards require testing to ensure quality. The purpose of this document is to describe how this process may be performed.
-The Testing Apparatus will provide all of the connections necessary to test the HPC, including power to the board. The HPC Testing Apparatus is and electro mechanical device intended only to perform quality controls against a cross section of HPC PCBs created. 
-\end{abstract}
-
-\section*{Its Automated!}
-The purpose of the HPC-TA  is to perform the 100 to 1000 tests that may guaranty the reasonable quality, of the HPC-TA with minimal human intervention. Never the less, it is a human operated device. Human operators must remain aware of possible fault conditions. A short circuit, for example could cause fire, or a hot smell. Any irregular behaviour from the HPC-TA should result in it being turned off. 
-
-\section*{TP: Test Points}
-The HPC PCB Contains 221 TP, 1-236, enumerated as TP1, TP2, ... TP236. The Test points allow for component testing, and live circuit testing. For the 
-\subsection*{Types of Tests}
-Power: GND, 24V, and Voltage Regulator Tests. 
-Component tests: This may include continuity to gnd, or specified test points.
-Powered Component tests: This may involve tests of components where power is required to conduct the tests, such as but not limited to switching relays, blinking LEDs, or communicating with specific devices beyond basic connectivity tests. 
-
-\section*{Methods}
-
-\section*{}
-\section*{}
-\section*{}
-
+\begin{itemize}
+	\item \textbf{Power Tests:} Verification of GND, 24V input, and voltage regulator outputs.
+	
+	\item \textbf{Component Tests:} Continuity checks to GND or between specified test points.
+	
+	\item \textbf{Powered Component Tests:} Functional verification of components requiring power,
+	including (but not limited to) relay actuation, LED indication, and communication
+	with onboard devices beyond basic connectivity tests.
+	
+	\item \textbf{Continuity Tests:} Verification that designated circuit components
+	are electrically connected within specified tolerance.
+	
+	\item \textbf{Isolation Tests:} Verification that circuits intended to remain
+	electrically isolated are not connected (e.g., 3.3\,VDC to GND).
+\end{itemize}
+	
+	\section*{Construction}
+	(I haven't built it yet lol this is all a probably:)
+	The HPC-TA is a clamping electro mechanical device consisting of a jig to hold the HPC PCB, and numerous aligned test probes which shall contact the HPC PCB when the clamp is closed. Once the board is inserted and seated, and the testing platform conducts a basic power test to check for nominal voltages. If this test passes, more comprehensive testing may be conducted. As an electro mechanical device the HPC-TA will be subject to wear and tear, the most likely point of failure might be the test probes. A specific effort to ensure maintainable, repairable construction. will be applied. 
+	\subsection*{Internal Components}
+	To be Determined MCU testing? PLC? A raspberry pi? with over 100 possible tests, we better figure out what the specific tests are, and then how to build that. An Arduino mega has 70 IO. A TS7600 has 70 IO. these are the cheapest readily available components we have. 
+	
+	\subsection*{Human interface} might be indicator LEDs, might have a GUI. 
+	
+	\subsection*{logging} At present, HPC PCBs do not have unique IDs printed on the board.
+	The MAC addresses of both ESP32 MCUs might be used. Component level tracking thought the product life cycle may be challenging. The larger purpose of logging may be to track quality metrics. 
+	\subsection*{Alterations}
+	Any physical, or electrical alternations to the HPC PCB may result in the necessity to re-tool the HPC-TA. This includes: Changes to board dimensions, changes to TP locations, changes to components, or other changes effecting electrical or mechanical composition. 
+	
+	
+	\section*{Methods}
+	An if this, then that process. If All tests pass, board passes, if power passes, move to next test.
+	The testing apparatus may include limited self testing, for alignment, a specific test pin performance.
+	
+	
+	After the HPC-TA is clamped onto a HPC PCB, the HPC-TA performs a basic test to check if the HPC PCB passes a basic power test. If basic power regulation testing passes, more testings. Else immediate HPC-PCB removal may be recommended. 
+	
+	%\section*{}
+	%\section*{}
+	%\textbf{}
+	%\emph{}
+	%	\begin{verbatim}
+		%	$ 
+		%    \end{verbatim}
+	
+	
+	%\begin{figure}[h!]
+	%	\centering
+	%	\includegraphics[width=1.0\linewidth]{img.src}
+	%	\caption{}
+	%\label{fig:1}
+	%\end{figure}
+	\section*{Alternatives}
+	\begin{itemize}
+		\item ICT/Flying Probe
+        \item Manual Testing
+    \end{itemize}     
 \end{document}
